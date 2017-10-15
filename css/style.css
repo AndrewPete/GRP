@@ -6,6 +6,9 @@
     font-family: ProximaNova-Bold;
     src: url("../fonts/ProximaNova-Bold.otf") format("opentype");
 }
+
+
+
 @font-face {
     font-family: ProximaNova-BoldIt;
     src: url("../fonts/ProximaNova-BoldIt.otf") format("opentype");
