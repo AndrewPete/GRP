@@ -66,6 +66,15 @@
 .grp-smallest-paragraph {
 	font-size: 10px !important;
 }
+.grp-font-25 {
+	font-size: 25px;
+}
+.grp-font-13 {
+	font-size: 13px !important;
+}
+.grp-darkgreen-color {
+	color: #12312D;
+}
 .gpr-darkblue-color {
 	color: #0A0830;
 }
@@ -262,17 +271,42 @@
   background-size: auto 100%;
   right: 0;
 }
-.grp-second-about-section li.grb-yellow-square::before {
+.grp-second-about-section .grp-list-square li::before {
 	content: '';
 	width: 15px;
 	height: 15px;
 	float: left;
-	background-color: #FCCE12;
 	margin-right: 20px;
 	margin-top: 3px;
 }
+.grp-second-about-section li.grp-yellow-square::before {
+	background-color: #FCCE12;
+}
+.grp-second-about-section li.grp-orange-square::before {
+	background-color: #FF9900;
+}
+.grp-second-about-section li.grp-grey-square::before {
+	background-color: #9B9B9B;
+}
+.grp-second-about-section li.grp-black-square::before {
+	background-color: #000;
+}
+.grp-second-about-section .grp-list-col {
+	padding-top: 15px;
+}
 .grp-second-about-section .grp-about-list h3 {
 	margin-left: 35px;
+}
+.grp-third-about-section .thumbnail {
+	padding: 0;
+	border-color: #FF9900;
+}
+.grp-third-about-section h3 {
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+.grp-third-about-section p {
+	margin-bottom: 30px;
 }
 .grp-first-footer-section {
 	text-align: center;
@@ -337,6 +371,10 @@
 	.form-inline .form-control {
     	min-width: 250px;
 	}
+	/* SECTIONS */
+	.grp-second-about-section .grp-list-col {
+		padding-left: 35px;
+	}
 }
 /* Portrait tablets and small desktops */
 @media (max-width: 992px) {
@@ -371,7 +409,10 @@
   }
 }
 @media (min-width: 768px) {
-	/* LOGO & NAVIGATION */
+	/* SECTIONS */
+	.grp-second-about-section .grp-list-col {
+		border-left: 1px solid #FF9900;
+	}
 }
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
