@@ -140,9 +140,12 @@
 
 /* LOGO & NAVIGATION */
 .grp-header .navbar {
-	padding-top: 21px;
-	padding-bottom: 11px;
+	padding-top: 25px;
+	padding-bottom: 25px;
 	margin-bottom: 0;
+  transition: padding .2s ease-in-out;
+  -moz-transition: padding .2s ease-in-out;
+  -webkit-transition: padding .2s ease-in-out;
 }
 .grp-header .navbar-default {
     background-color: rgba(0, 0, 0, 0.43);
@@ -319,18 +322,15 @@
 }
 @media (min-width: 768px) {
 	/* LOGO & NAVIGATION */
-	.grp-header .navbar-right li:not(:last-child) {
-    	padding-top: 9px;
-    }
-    .grp-header .nav .active::after {
+  .grp-header .nav .active::after {
 		content: '';
-	    width: 74%;
-	    position: absolute;
-	    left: 13%;
-	    bottom: 10px;
-	    border-width: 0 0 1px;
-	    border-style: solid;
-	    color: #FCCE12;
+    width: 74%;
+    position: absolute;
+    left: 13%;
+    bottom: 10px;
+    border-width: 0 0 1px;
+    border-style: solid;
+    color: #FCCE12;
 	}
 }
 /* Landscape phones and portrait tablets */
