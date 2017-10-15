@@ -1,4 +1,4 @@
-@font-face {
+.grp-header .navbar-fixed-top@font-face {
     font-family: ProximaNova-Black;
     src: url("../fonts/ProximaNova-Black.otf") format("opentype");
 }
@@ -140,9 +140,12 @@
 
 /* LOGO & NAVIGATION */
 .grp-header .navbar {
-	padding-top: 21px;
-	padding-bottom: 11px;
+	padding-top: 25px;
+	padding-bottom: 25px;
 	margin-bottom: 0;
+  transition: padding .2s ease-in-out;
+  -webkit-transition: padding .2s ease-in-out;
+  -moz-transition: padding .2s ease-in-out;
 }
 .grp-header .navbar-default {
     background-color: rgba(0, 0, 0, 0.43);
@@ -152,6 +155,37 @@
 }
 .grp-header .navbar-default .navbar-nav>li>a {
     color: #fff;
+}
+.grp-header .navbar>.container .navbar-brand {
+  padding: 0;
+  margin-left: 0;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  background-image: url(../img/grp_logo.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+.grp-header .navbar.grp-navbar-white>.container .navbar-brand {
+  background-position: -200px 0;
+}
+.grp-header .navbar>.container .navbar-right {
+  margin-right: 0;
+}
+.grp-header .navbar.grp-navbar-white {
+  background-color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(113,113,113,1);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(113,113,113,1);
+  box-shadow: 0px 1px 5px 0px rgba(113,113,113,1);
+}
+.grp-header .navbar-default.grp-navbar-white .navbar-nav>li>a,
+.grp-header .navbar.grp-navbar-white .navbar-nav>li .btn {
+  color: #717171;
+}
+.grp-header .navbar .navbar-nav>li .btn {
+  margin-top: 6px;
 }
 
 /* SECTIONS */
@@ -288,18 +322,15 @@
 }
 @media (min-width: 768px) {
 	/* LOGO & NAVIGATION */
-	.grp-header .navbar-right li:not(:last-child) {
-    	padding-top: 9px;
-    }
-    .grp-header .nav .active::after {
+  .grp-header .nav .active::after {
 		content: '';
-	    width: 74%;
-	    position: absolute;
-	    left: 13%;
-	    bottom: 10px;
-	    border-width: 0 0 1px;
-	    border-style: solid;
-	    color: #FCCE12;
+    width: 74%;
+    position: absolute;
+    left: 13%;
+    bottom: 10px;
+    border-width: 0 0 1px;
+    border-style: solid;
+    color: #FCCE12;
 	}
 }
 /* Landscape phones and portrait tablets */
