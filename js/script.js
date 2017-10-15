@@ -6,11 +6,13 @@ $(function() {
   });
   function set_header_white() {
     var scroll = $(window).scrollTop();
-    if (scroll >= 200) {
+    if (scroll >= 70) {
       $(".navbar").addClass("grp-navbar-white");
     } else {
       $(".navbar").removeClass("grp-navbar-white");
     }
   }
 
+  //parallax
+  $('.grp-parallax').parallax("100%", -0.2);
 });

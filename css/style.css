@@ -223,12 +223,23 @@
 }
 
 /* SECTIONS */
-.grp-first-section {
+.grp-parallax {
+  background-image: url(../img/section1.1-bg.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  position: absolute;
+  right: -200px;
+  width: 900px;
+  height: 100%;
+  top: 0;
+  background-size: 100%;
+}
+.grp-first-section,
+.grp-first-about-section {
 	background-color: #000;
-	background-image: url(../img/section1.1-bg.jpg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: right;
+  position: relative;
+  overflow: hidden;
 }
 .grp-third-section::before {
 	content: '';
@@ -246,11 +257,10 @@
 	background-position: center;
 	position: relative;
 }
-.grp-first-about-section {
+.grp-first-about-section .grp-parallax {
 	background-image: url(../img/section2.1-bg.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: right;
+  background-size: auto 100%;
+  right: 0;
 }
 .grp-second-about-section li.grb-yellow-square::before {
 	content: '';
@@ -317,9 +327,10 @@
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
 	/* LOGO & NAVIGATION */
-	.grp-header .navbar-right li:not(:last-child) {
-		padding-right: 5px;
-	}
+  .grp-header .navbar-right li:not(:last-child) {
+    padding-right: 25px;
+    padding-left: 10px;
+  }
 }
 @media (min-width: 992px) {
 	/* FOOTER FORM */
@@ -354,6 +365,10 @@
 	.grp-market-form .btn {
 		margin-top: 15px;
 	}
+  .grp-header .navbar-default .navbar-nav>li {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
 }
 @media (min-width: 768px) {
 	/* LOGO & NAVIGATION */
@@ -376,10 +391,10 @@
 	}
 	/* SPACING */
 	.grp-section-top-spacing-180 {
-		padding-top: 80px;
+		padding-top: 120px;
 	}
 	.grp-section-spacing-180 {
-		padding-bottom: 80px;
+		padding-bottom: 120px;
 	}
 	.grp-section-spacing-280 {
 		padding-bottom: 180px;
@@ -392,6 +407,27 @@
 	.grp-first-section {
 		background-image: none;
 	}
+  .grp-first-about-section .grp-parallax,
+  .grp-parallax {
+    background-image: none;
+  }
+  .grp-header .navbar-default .navbar-collapse,
+  .grp-header .navbar-default .navbar-form {
+    border: 0;
+    box-shadow: none;
+    background-color: #000;
+  }
+  .grp-header .navbar-default.grp-navbar-white .navbar-collapse,
+  .grp-header .navbar-default.grp-navbar-white .navbar-form {
+    background-color: #fff;
+  }
+  .grp-header .navbar-default .navbar-nav>li {
+    width: 100%;
+    float: left;
+  }
+  .grp-header .navbar-default .navbar-nav>li>a {
+    float: left;
+  }
 }
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
