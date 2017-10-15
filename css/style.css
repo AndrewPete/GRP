@@ -116,6 +116,9 @@
 	border: none;
 	padding-right: 20px;
 	padding-left: 20px;
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
 }
 .grp-body .btn:hover {
 	background-color: #e7b900;
@@ -148,13 +151,44 @@
   -webkit-transition: padding .2s ease-in-out;
 }
 .grp-header .navbar-default {
-    background-color: rgba(0, 0, 0, 0.43);
+  background-color: rgba(0, 0, 0, 0.43);
 }
 .grp-header .navbar-fixed-top {
-    border-width: 0;
+  border-width: 0;
 }
 .grp-header .navbar-default .navbar-nav>li>a {
-    color: #fff;
+  color: #fff;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+}
+.grp-header .navbar-default .navbar-nav>li>a:before,
+.grp-header .navbar-default .navbar-nav>li>a:after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+  width: 0;
+  height: 0;
+  border-bottom: 1px solid #fcce12;
+  transition: width .2s ease-in-out;
+  -moz-transition: width .2s ease-in-out;
+  -webkit-transition: width .2s ease-in-out;
+}
+.grp-header .navbar-default .navbar-nav>li>a:after {
+  right: auto;
+  left: 50%;
+}
+.grp-header .navbar-default .navbar-nav>li.active>a:before,
+.grp-header .navbar-default .navbar-nav>li>a:hover:before,
+.grp-header .navbar-default .navbar-nav>li.active>a:after,
+.grp-header .navbar-default .navbar-nav>li>a:hover:after {
+  width: 50%;
+}
+.grp-header .navbar-default .navbar-nav>li.active>a,
+.grp-header .navbar-default .navbar-nav>li>a:hover {
+  color: #fff;
+  background-color: transparent;
 }
 .grp-header .navbar>.container .navbar-brand {
   padding: 0;
@@ -276,7 +310,8 @@
 	}
 	/* LOGO & NAVIGATION */
 	.grp-header .navbar-right li:not(:last-child) {
-		padding-right: 50px;
+		padding-right: 60px;
+    padding-left: 10px;
 	}
 }
 /* Landscape tablets and medium desktops */
@@ -322,16 +357,6 @@
 }
 @media (min-width: 768px) {
 	/* LOGO & NAVIGATION */
-  .grp-header .nav .active::after {
-		content: '';
-    width: 74%;
-    position: absolute;
-    left: 13%;
-    bottom: 10px;
-    border-width: 0 0 1px;
-    border-style: solid;
-    color: #FCCE12;
-	}
 }
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
