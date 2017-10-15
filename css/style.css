@@ -218,7 +218,7 @@
 	background-size: cover;
 	background-position: right;
 }
-.grp-second-about-section .grp-about-list ul li::before {
+.grp-second-about-section li.grb-yellow-square::before {
 	content: '';
 	width: 15px;
 	height: 15px;
