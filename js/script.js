@@ -14,5 +14,5 @@ $(function() {
   }
 
   //parallax
-  $('.grp-parallax').parallax("100%", -0.2);
+  $('.grp-parallax').parallax("100%", -0.4);
 });
