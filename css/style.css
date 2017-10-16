@@ -89,6 +89,9 @@
 }
 
 /* SPACING */
+.grp-header-top-spacing-30 {
+	margin-top: 30px !important;
+}
 .grp-header-spacing-30 {
 	margin-bottom: 30px !important;
 }
