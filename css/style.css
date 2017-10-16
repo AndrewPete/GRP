@@ -57,6 +57,9 @@
 	font-size: 20px;
 	margin: 0;
 }
+.grp-lightit-font {
+	font-family: 'ProximaNova-LightItalic';
+}
 .grp-bigger-paragraph {
 	font-size: 24px;
 }
@@ -69,6 +72,9 @@
 }
 .grp-font-25 {
 	font-size: 25px;
+}
+.grp-font-24 {
+	font-size: 24px;
 }
 .grp-font-13 {
 	font-size: 13px !important;
@@ -117,6 +123,9 @@
 .grp-paragraph-spacing-90 {
 	margin-bottom: 90px !important;
 }
+.grp-paragraph-spacing-150 {
+	margin-bottom: 150px !important;
+}
 .grp-section-spacing-100 {
 	padding-bottom: 100px;
 }
@@ -141,12 +150,6 @@
 }
 .grp-footer-top-spacing-50 {
 	padding-top: 50px;
-}
-.grp-padding-left-20 {
-  padding-left: 20px;
-}
-.grp-padding-right-20 {
-  padding-right: 20px;
 }
 
 /* BUTTONS & LINKS */
@@ -280,23 +283,23 @@
 
 /* SECTIONS */
 .grp-parallax {
-  background-image: url(../img/section1.1-bg.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
-  position: absolute;
-  right: -200px;
-  width: 900px;
-  height: 100%;
-  top: 0;
-  background-size: 100%;
+	background-image: url(../img/section1.1-bg.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+	position: absolute;
+	right: -200px;
+	width: 900px;
+	height: 100%;
+	top: 0;
+	background-size: 100%;
 }
 .grp-first-section,
 .grp-first-about-section,
 .grp-first-corporate-section {
 	background-color: #000;
-  position: relative;
-  overflow: hidden;
+	position: relative;
+	overflow: hidden;
 }
 .grp-third-section::before {
 	content: '';
@@ -316,27 +319,27 @@
 }
 .grp-first-about-section .grp-parallax {
 	background-image: url(../img/section2.1-bg.jpg);
-  background-size: auto 100%;
-  right: 0;
+	background-size: auto 100%;
+	right: 0;
 }
 .grp-first-corporate-section .grp-parallax {
 	background-image: url(../img/section3.1-bg.jpg);
-  background-size: auto 74%;
-  right: 15%;
-  top: 18%;
+	background-size: auto 74%;
+	right: 15%;
+	top: 18%;
 }
 .grp-second-about-section .grp-list-square li {
-  position: relative;
-  margin-bottom: 10px;
-  padding-left: 35px;
+	position: relative;
+	margin-bottom: 10px;
+	padding-left: 35px;
 }
 .grp-second-about-section .grp-list-square li::before {
-  content: '';
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  left: 0;
-  top: 4px;
+	content: '';
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	left: 0;
+	top: 4px;
 }
 .grp-second-about-section li.grp-yellow-square::before {
 	background-color: #FCCE12;
@@ -362,13 +365,24 @@
 	margin-top: 25px;
 	margin-bottom: 15px;
 }
-.grp-third-corporate-section .grp-icon-thumbnail .thumbnail {
+.grp-third-corporate-section .grp-icon-thumbnail .thumbnail,
+.grp-fourth-otherservices-section .grp-icon-thumbnail .thumbnail {
 	border: none;
 	background-color: transparent;
 }
 .grp-third-corporate-section .grp-icon-thumbnail .thumbnail img {
 	width: 70px;
 	height: 70px;
+}
+.grp-fourth-otherservices-section .grp-icon-thumbnail .thumbnail img {
+	width: 100px;
+	height: 100px;
+}
+.grp-first-otherservices-section {
+	background-image: url(../img/section4.1-bg.jpg);
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .grp-first-footer-section {
 	text-align: center;
@@ -405,14 +419,17 @@
 }
 
 /* RESPONSIVE */
+@media (min-width: 1370px) {
+	/* GENERAL */
+	.grp-body .container {
+		width: 1370px;
+	}
+}
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
 	/* GENERAL */
-	.grp-body .container {
-		width: 1300px;
-	}
 	.grp-body .container-medium {
-		width: 1100px;
+		width: 1130px;
 	}
 	/* BUTTONS & LINK */
 	.grp-find-btn {
@@ -422,21 +439,24 @@
 	/* LOGO & NAVIGATION */
 	.grp-header .navbar-right li:not(:last-child) {
 		padding-right: 60px;
-    padding-left: 10px;
+    	padding-left: 10px;
 	}
 	/* SPACING */
 	.grp-thumbnail-larger-padding {
 		padding-left: 35px;
 		padding-right: 35px;
 	}
+	.grp-padding-top-40 {
+		padding-top: 40px;
+	}
 }
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
 	/* LOGO & NAVIGATION */
-  .grp-header .navbar-right li:not(:last-child) {
-    padding-right: 25px;
-    padding-left: 10px;
-  }
+	.grp-header .navbar-right li:not(:last-child) {
+		padding-right: 25px;
+		padding-left: 10px;
+	}
   	/* FOOTER FORM */
 	.grp-market-form .btn {
 		margin-top: 20px;
@@ -445,16 +465,7 @@
 @media (min-width: 992px) {
 	/* GENERAL */
 	.grp-body .container-small {
-		width: 860px;
-	}
-	/* SECTIONS */
-	.grp-about-left-sports-padding {
-		padding-top: 40px;
-		padding-left: 50px;
-	}
-	.grp-about-right-sports-padding {
-		padding-top: 40px;
-		padding-right: 50px;
+		width: 890px;
 	}
 	/* FOOTER FORM */
 	.grp-market-form .form-inline .form-control {
@@ -466,6 +477,13 @@
 	.grp-market-form .btn {
 		min-width: 150px;
 	}
+	/* SPACING */
+	.grp-padding-left-50 {
+  		padding-left: 50px;
+	}
+	.grp-padding-right-50 {
+  		padding-right: 50px;
+	}
 }
 /* Portrait tablets and small desktops */
 @media (max-width: 992px) {
@@ -475,6 +493,20 @@
 	}
 	.grp-footer-list .list-inline {
 		margin-bottom: 35px;
+	}
+	/* SPACING */
+	.grp-responsive-top-spacing-40 {
+		padding-top: 40px;
+	}
+	.grp-responsive-font-50 {
+		font-size: 50px !important;
+	}
+	.grp-responsive-spacing-75 {
+		margin-bottom: 75px;
+	}
+	/* SECTIONS */
+	.grp-icon-thumbnail p {
+  		min-height: 80px;
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -490,19 +522,36 @@
 	.grp-header .navbar-brand {
 		padding-left: 5px;
 	}
+	/* SPACING */
+	.grp-responsive-spacing-180 {
+		padding-bottom: 180px !important;
+	}
 	/* FOOTER FORM */
 	.grp-market-form .btn {
 		margin-top: 20px;
 	}
-  .grp-header .navbar-default .navbar-nav>li {
-    padding-left: 4px;
-    padding-right: 4px;
-  }
+	.grp-header .navbar-default .navbar-nav>li {
+		padding-left: 4px;
+		padding-right: 4px;
+	}
 }
 @media (min-width: 768px) {
 	/* SECTIONS */
 	.grp-second-about-section .grp-list-border {
 		border-left: 1px solid #FF9900;
+	}
+	.grp-padding-left-20 {
+		padding-left: 20px;
+	}
+	.grp-padding-right-20 {
+		padding-right: 20px;
+	}
+	/* SPACING */
+	.grp-responsive-top-spacing-180 {
+		padding-top: 180px;
+	}
+	.grp-responsive-top-padding-top-30 {
+		padding-top: 30px;
 	}
 	/* FOOTER */
 	.grp-market-form .form-inline .form-group:not(:last-child) {
@@ -535,6 +584,15 @@
 	.grp-section-spacing-280 {
 		padding-bottom: 180px;
 	}
+	.grp-responsive-spacing-40 {
+		margin-bottom: 40px !important;
+	}
+	.grp-small-responsive-spacing-75 {
+		margin-bottom: 75px !important;
+	}
+	.grp-small-responsive-spacing-45 {
+		padding-bottom: 45px !important;
+	}
 	/* FOOTER */
 	.grp-footer-list li:not(:last-child) {
 		padding-right: 25px !important;
@@ -543,27 +601,33 @@
 	.grp-first-section {
 		background-image: none;
 	}
-  .grp-first-about-section .grp-parallax,
-  .grp-parallax {
-    background-image: none;
-  }
-  .grp-header .navbar-default .navbar-collapse,
-  .grp-header .navbar-default .navbar-form {
-    border: 0;
-    box-shadow: none;
-    background-color: #000;
-  }
-  .grp-header .navbar-default.grp-navbar-white .navbar-collapse,
-  .grp-header .navbar-default.grp-navbar-white .navbar-form {
-    background-color: #fff;
-  }
-  .grp-header .navbar-default .navbar-nav>li {
-    width: 100%;
-    float: left;
-  }
-  .grp-header .navbar-default .navbar-nav>li>a {
-    float: left;
-  }
+	.grp-first-about-section .grp-parallax,
+	.grp-parallax {
+		background-image: none;
+	}
+	.grp-header .navbar-default .navbar-collapse,
+	.grp-header .navbar-default .navbar-form {
+		border: 0;
+		box-shadow: none;
+		background-color: #000;
+	}
+	.grp-header .navbar-default.grp-navbar-white .navbar-collapse,
+	.grp-header .navbar-default.grp-navbar-white .navbar-form {
+		background-color: #fff;
+	}
+	.grp-header .navbar-default .navbar-nav>li {
+		width: 100%;
+		float: left;
+	}
+	.grp-header .navbar-default .navbar-nav>li>a {
+		float: left;
+	}
+	.grp-responsive-centered-img img {
+		margin: 0 auto;
+	}
+	.grp-first-corporate-section .grp-parallax {
+		background-image: none;
+	}
 }
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
