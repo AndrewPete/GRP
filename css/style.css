@@ -72,6 +72,9 @@
 .grp-font-13 {
 	font-size: 13px !important;
 }
+.grp-font-14 {
+	font-size: 14px !important;
+}
 .grp-darkgreen-color {
 	color: #12312D;
 }
@@ -92,11 +95,26 @@
 .grp-header-spacing-45 {
 	margin-bottom: 45px !important;
 }
+.grp-header-spacing-60 {
+	margin-bottom: 60px !important;
+}
+.grp-header-spacing-90 {
+	margin-bottom: 90px !important;
+}
+.grp-paragraph-spacing-30 {
+	margin-bottom: 30px !important;
+}
 .grp-paragraph-spacing-45 {
 	margin-bottom: 45px !important;
 }
 .grp-paragraph-spacing-60 {
 	margin-bottom: 60px !important;
+}
+.grp-paragraph-spacing-90 {
+	margin-bottom: 90px !important;
+}
+.grp-section-spacing-100 {
+	padding-bottom: 100px;
 }
 .grp-section-top-spacing-180 {
 	padding-top: 180px;
@@ -109,6 +127,10 @@
 }
 .grp-section-spacing-280 {
 	padding-bottom: 280px;
+}
+.grp-thumbnail-padding {
+	padding-left: 15px;
+	padding-right: 15px;
 }
 .grp-footer-spacing-50 {
 	padding-bottom: 50px;
@@ -145,9 +167,24 @@
 	outline: none;
 	text-decoration: none;
 }
-
 .grp-body a:hover {
 	text-decoration: none;
+}
+.grp-market-form .btn {
+	padding: 17px 35px;
+}
+.grp-find-btn {
+	background-color: #fff !important;
+	border: 1px solid #5e5e5e !important;
+	color: #5e5e5e !important;
+}
+.grp-find-btn:hover {
+	background-color: #f0f0f0 !important;
+}
+.grp-find-btn:active,
+.grp-find-btn:focus {
+	background-color: #5e5e5e !important;
+	color: #fff !important;
 }
 
 /* LOGO & NAVIGATION */
@@ -291,9 +328,6 @@
 .grp-second-about-section li.grp-black-square::before {
 	background-color: #000;
 }
-.grp-second-about-section .grp-list-col {
-	padding-top: 15px;
-}
 .grp-second-about-section .grp-about-list h3 {
 	margin-left: 35px;
 }
@@ -305,19 +339,27 @@
 	margin-top: 25px;
 	margin-bottom: 15px;
 }
-.grp-third-about-section p {
-	margin-bottom: 30px;
+.grp-first-corporate-section {
+	background-image: url(../img/section3.1-bg.jpg);
+	background-size: cover;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+.grp-third-corporate-section .grp-icon-thumbnail .thumbnail {
+	border: none;
+	background-color: transparent;
+}
+.grp-third-corporate-section .grp-icon-thumbnail .thumbnail img {
+	width: 70px;
+	height: 70px;
 }
 .grp-first-footer-section {
 	text-align: center;
 }
 
 /* FOOTER */
-.grp-market-form .form-inline .form-group:not(:last-child) {
-	margin-right: 15px;
-}
 .grp-market-form .form-control {
-	padding: 18px;
+	padding: 25px;
 	color: #5E5E5E;
 	border-color: #FCCE12;
 }
@@ -349,13 +391,20 @@
 	.grp-body .container-medium {
 		width: 1100px;
 	}
-	.grp-body .container-small {
-		width: 860px;
+	/* BUTTONS & LINK */
+	.grp-find-btn {
+		padding-left: 50px !important;
+		padding-right: 50px !important;
 	}
 	/* LOGO & NAVIGATION */
 	.grp-header .navbar-right li:not(:last-child) {
 		padding-right: 60px;
     padding-left: 10px;
+	}
+	/* SPACING */
+	.grp-thumbnail-larger-padding {
+		padding-left: 35px;
+		padding-right: 35px;
 	}
 }
 /* Landscape tablets and medium desktops */
@@ -365,15 +414,34 @@
     padding-right: 25px;
     padding-left: 10px;
   }
+  	/* FOOTER FORM */
+	.grp-market-form .btn {
+		margin-top: 20px;
+	}
 }
 @media (min-width: 992px) {
-	/* FOOTER FORM */
-	.form-inline .form-control {
-    	min-width: 250px;
+	/* GENERAL */
+	.grp-body .container-small {
+		width: 860px;
 	}
 	/* SECTIONS */
-	.grp-second-about-section .grp-list-col {
-		padding-left: 35px;
+	.grp-about-left-sports-padding {
+		padding-top: 40px;
+		padding-left: 50px;
+	}
+	.grp-about-right-sports-padding {
+		padding-top: 40px;
+		padding-right: 50px;
+	}
+	/* FOOTER FORM */
+	.grp-market-form .form-inline .form-control {
+    	min-width: 270.5px;
+	}
+	.grp-market-form #inputEmail {
+		min-width: 307.5px;
+	}
+	.grp-market-form .btn {
+		min-width: 150px;
 	}
 }
 /* Portrait tablets and small desktops */
@@ -401,7 +469,7 @@
 	}
 	/* FOOTER FORM */
 	.grp-market-form .btn {
-		margin-top: 15px;
+		margin-top: 20px;
 	}
   .grp-header .navbar-default .navbar-nav>li {
     padding-left: 4px;
@@ -410,8 +478,12 @@
 }
 @media (min-width: 768px) {
 	/* SECTIONS */
-	.grp-second-about-section .grp-list-col {
+	.grp-second-about-section .grp-list-border {
 		border-left: 1px solid #FF9900;
+	}
+	/* FOOTER */
+	.grp-market-form .form-inline .form-group:not(:last-child) {
+		margin-right: 20px;
 	}
 }
 /* Landscape phones and portrait tablets */
